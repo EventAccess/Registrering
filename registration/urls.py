@@ -22,6 +22,7 @@ from frontend import views
 
 
 urlpatterns = [
+    path("__reload__/", include("django_browser_reload.urls")), #This is the URL for the browser reload app.    
     path('admin/', admin.site.urls), # This is the admin page for the project.
     path('', views.base_view, name='home'), #Root URL -> base.html
     path('test/', views.test_view, name='test'), #Test/placeholder URL
