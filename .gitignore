@@ -3,3 +3,4 @@
 !example.env
 .env
 node_modules/
+dev.env
