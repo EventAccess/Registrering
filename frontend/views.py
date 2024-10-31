@@ -5,6 +5,5 @@ from rest_framework.response import Response
 from rest_framework import status
 
 
-
 def home(request):
-    return render(request, 'base.html')
+    return render(request, "base.html")

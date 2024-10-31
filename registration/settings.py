@@ -1,5 +1,6 @@
 import os
 from dotenv import load_dotenv
+
 load_dotenv()
 
 from pathlib import Path
@@ -13,12 +14,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.getenv('DJANGO_SECRET_KEY')
+SECRET_KEY = os.getenv("DJANGO_SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.getenv('DJANGO_DEBUG',False)
+DEBUG = os.getenv("DJANGO_DEBUG", False)
 
-ALLOWED_HOSTS = os.getenv('DJANGO_HOSTS', '').split(',')
+ALLOWED_HOSTS = os.getenv("DJANGO_HOSTS", "").split(",")
 
 
 # Application definition
@@ -31,8 +32,8 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "frontend",
-    'theme',
-    'django_browser_reload', #this is the browser reload app, which automatically reloads the browser when changes are made to the code.
+    "theme",
+    "django_browser_reload",  # this is the browser reload app, which automatically reloads the browser when changes are made to the code.
 ]
 
 MIDDLEWARE = [
@@ -44,7 +45,6 @@ MIDDLEWARE = [
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
     "django_browser_reload.middleware.BrowserReloadMiddleware",
-
 ]
 
 ROOT_URLCONF = "registration.urls"
@@ -74,12 +74,12 @@ WSGI_APPLICATION = "registration.wsgi.application"
 
 DATABASES = {
     "default": {
-        "HOST": os.getenv('SQL_HOST'),
-        "PORT": os.getenv('SQL_PORT'),
-        "ENGINE": os.getenv('SQL_ENGINE'),
-        "NAME": os.getenv('SQL_DATABASE'),
-        "USER": os.getenv('SQL_USER'),
-        "PASSWORD": os.getenv('SQL_PASSWORD'),
+        "HOST": os.getenv("SQL_HOST"),
+        "PORT": os.getenv("SQL_PORT"),
+        "ENGINE": os.getenv("SQL_ENGINE"),
+        "NAME": os.getenv("SQL_DATABASE"),
+        "USER": os.getenv("SQL_USER"),
+        "PASSWORD": os.getenv("SQL_PASSWORD"),
     }
 }
 
@@ -121,15 +121,13 @@ USE_TZ = True
 STATIC_URL = "static/"
 
 
-
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 
-TAILWIND_APP_NAME = 'theme'
+TAILWIND_APP_NAME = "theme"
 INTERNAL_IPS = [
     "127.0.0.1",
 ]
-
