@@ -1,0 +1,26 @@
+services:
+  web:
+    build: ./
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - .:/usr/src/Registrering
+    ports:
+      - "8000:8000"
+    env_file:
+      - ./dev.env
+    depends_on:
+      - Database
+  Database:
+    image: postgres:15
+    volumes:
+      - postgre_data:/var/lib/postgresql/data/
+    environment:
+      - name=postgres
+      - POSTGRES_USER=foo_bar
+      - POSTGRES_PASSWORD=foo_bar
+      - POSTGRES_DB=foo_bar
+
+volumes:
+  postgre_data:
+
+
