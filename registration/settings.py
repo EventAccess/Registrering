@@ -27,6 +27,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.getenv("DJANGO_SECRET_KEY")
+assert SECRET_KEY, ValueError("You must configure the DJANGO_SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.getenv("DJANGO_DEBUG", False)
@@ -86,12 +87,12 @@ WSGI_APPLICATION = "registration.wsgi.application"
 
 DATABASES = {
     "default": {
-        "HOST": os.getenv("SQL_HOST"),
-        "PORT": os.getenv("SQL_PORT"),
-        "ENGINE": os.getenv("SQL_ENGINE"),
-        "NAME": os.getenv("SQL_DATABASE"),
-        "USER": os.getenv("SQL_USER"),
-        "PASSWORD": os.getenv("SQL_PASSWORD"),
+        "ENGINE": os.getenv("DJANGO_DATABASE_ENGINE"),
+        "HOST": os.getenv("DJANGO_DATABASE_HOST"),
+        "PORT": os.getenv("DJANGO_DATABASE_PORT", 5432),
+        "NAME": os.getenv("POSTGRES_DB"),
+        "USER": os.getenv("POSTGRES_USER"),
+        "PASSWORD": os.getenv("POSTGRES_PASSWORD"),
     }
 }
 
