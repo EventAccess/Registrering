@@ -45,8 +45,6 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "frontend",
-    "theme",
-    "django_browser_reload",  # this is the browser reload app, which automatically reloads the browser when changes are made to the code.
 ]
 
 MIDDLEWARE = [
@@ -57,7 +55,6 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
-    "django_browser_reload.middleware.BrowserReloadMiddleware",
 ]
 
 ROOT_URLCONF = "registration.urls"
