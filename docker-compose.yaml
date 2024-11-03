@@ -14,9 +14,9 @@ services:
     env_file: dev.env
     shm_size: 256MB
     volumes:
-      - postgre_data:/var/lib/postgresql/data/
+      - postgres_data:/var/lib/postgresql/data/
 
 volumes:
-  postgre_data:
+  postgres_data:
 
 
