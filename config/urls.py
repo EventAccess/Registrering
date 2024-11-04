@@ -17,7 +17,7 @@ Including another URLconf
 
 from django.contrib import admin
 from django.urls import path, include
-from frontend import views
+from eventaccess_registration import views
 
 
 urlpatterns = [
