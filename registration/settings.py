@@ -27,7 +27,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.getenv("DJANGO_SECRET_KEY")
-assert SECRET_KEY, ValueError("You must configure the DJANGO_SECRET_KEY")
+# TODO: Verify that DJANGO_SECRET_KEY is configured
+#       mypy django plugin imports the settings file, so the assert does not work
+# assert SECRET_KEY, ValueError("You must configure the DJANGO_SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.getenv("DJANGO_DEBUG", False)
