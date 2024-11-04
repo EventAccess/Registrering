@@ -14,9 +14,6 @@ insert_final_newline = true
 [*.py]
 indent_style = space
 
-[*.sh]
-indent_style = space
-
 [*.y{a,}ml]
 indent_style = space
 indent_size = 2
@@ -25,14 +22,8 @@ indent_size = 2
 indent_style = unset
 indent_size = unset
 
-# TODO: Take a decisive stance on tabs vs spaces
 [*.{m,}{t,j}s{x,}]
 indent_size = 2
-indent_style = space
 
 [*.{json,css,html}]
-indent_style = space
 indent_size = 2
-
-[/{.github,.devcontainer}/**.json]
-indent_style = tab

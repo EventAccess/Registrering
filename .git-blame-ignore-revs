@@ -1,2 +1,5 @@
 # Autoformat: black
 7daedf3b93391775b9dec1593d91f194987442fc
+
+# Change indentation to repsect new editorconfig settings
+3fe1eedf43d290c67f7bc9b59aa4b231b0707c8e
