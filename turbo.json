@@ -1,0 +1,17 @@
+{
+	"pipeline": {
+		"build": {
+			"outputs": [
+				"dist/**",
+				".next/**"
+			]
+		},
+		"dev": {
+			"cache": false
+		},
+		"lint": {}
+	},
+	"globalDependencies": [
+		"**/package.json"
+	]
+}
