@@ -21,7 +21,7 @@ jobs:
       #- run: npm run lint
       #  working-directory: ./registration-frontend-react
 
-      - uses: reviewdog/action-eslint@v1.33.0
+      - uses: reviewdog/action-eslint@v1.33.2
         with:
           reporter: github-check
           workdir: "./registration-frontend-react"
