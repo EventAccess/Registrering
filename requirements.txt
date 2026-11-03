@@ -1,6 +1,6 @@
 Django[all]==5.2.5
 djangorestframework==3.16.1
 django-browser-reload==1.18.0
-python-dotenv==1.1.0
+python-dotenv==1.2.2
 psycopg2-binary==2.9.10
 daphne==4.2.0
